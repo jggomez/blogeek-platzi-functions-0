@@ -6,6 +6,9 @@ const postsController = require('./componentes/posts/PostsController.js')
 const errorController = require('./componentes/errores/ErrorController.js')
 const analiticasController = require('./componentes/analiticas/AnaliticasController.js')
 
+admin.initializeApp()
+admin.firestore().settings({ timestampsInSnapshots: true })
+
 // firebase functions:config:set configuration.email="XXXX" configuration.password="XXXXXX"
 // firebase functions:config:set configuration.claveapihubspot="XXXX"
 // firebase functions:config:set configuration.numcelularerror="XXXX"
@@ -16,10 +19,10 @@ exports.creacionUsuario = functions.auth
   .user()
   .onCreate(usuarioController.usuarioCreacionController)
 
-exports.creacionUsuario = functions.auth
+exports.eliminacionUsuario = functions.auth
   .user()
   .onDelete(usuarioController.usuarioEliminadoController)
 
-exports.creacionUsuario = functions.auth
+exports.creacionUsuarioCRM = functions.auth
   .user()
   .onCreate(usuarioController.creacionUsuarioCRM)
