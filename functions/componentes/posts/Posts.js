@@ -19,6 +19,35 @@ class Posts {
     const idPost = path.basename(rutaArchivo).split('.')[0]
     const bucket = admin.storage.bucket()
     const tmpRutaArchivo = path.join(os.tmpdir(), nombreArchivo)
+
+    const cliente = new vision.ImageAnnotatorClient()
+    
+    return bucket
+      .file(rutaArchivo)
+      .download({
+        destination : tmpRutaArchivo
+      })
+      .then(() => {
+        return cliente.safeSearchDetection(tmpRutaArchivo)
+      })
+      .then(resultado => {
+        const adulto = resultado[0].safeSearchAnnotation.adult
+        const violence = resultado[0].safeSearchAnnotation.violence
+        const medical = resultado[0].safeSearchAnnotation.medical
+        return (
+          this.esAdecuada(adulto) &&
+          this.esAdecuada(medical) &&
+          this.esAdecuada(violence)
+        )
+      })
+      .then(resp => {
+        if(resp){
+          this.actualizarEstadoPost(idPost, true)
+          return resp
+        }
+
+        return this.enviarNotRespImagenInapropiada(idPost)
+      })
   }
 
   esAdecuada (resultado) {
