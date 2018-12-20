@@ -12,3 +12,14 @@ const analiticasController = require('./componentes/analiticas/AnaliticasControl
 // firebase functions:config:set configuration.accountsidtwilio="XXXX"
 // firebase functions:config:set configuration.authtokentwilio="XXXX"
 
+exports.creacionUsuario = functions.auth
+  .user()
+  .onCreate(usuarioController.usuarioCreacionController)
+
+exports.creacionUsuario = functions.auth
+  .user()
+  .onDelete(usuarioController.usuarioEliminadoController)
+
+exports.creacionUsuario = functions.auth
+  .user()
+  .onCreate(usuarioController.creacionUsuarioCRM)
