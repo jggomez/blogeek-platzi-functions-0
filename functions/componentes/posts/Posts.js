@@ -17,9 +17,9 @@ class Posts {
     const rutaArchivo = archivo.name
     const nombreArchivo = path.basename(rutaArchivo)
     const idPost = path.basename(rutaArchivo).split('.')[0]
-    const bucket = admin.storage.bucket()
+    const bucket = admin.storage().bucket()
     const tmpRutaArchivo = path.join(os.tmpdir(), nombreArchivo)
-
+    
     const cliente = new vision.ImageAnnotatorClient()
     
     return bucket
