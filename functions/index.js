@@ -34,3 +34,7 @@ exports.registrarTopico = functions.firestore
 exports.enviarNotificacion = functions.firestore
   .document('posts/{idPost}')
   .onUpdate(postsController.actualizacionPostController)
+
+exports.validarImagen = functions.storage
+    .object()
+    .onFinalize(postsController.validarImagenPostController)
