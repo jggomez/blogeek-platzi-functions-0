@@ -26,3 +26,11 @@ exports.eliminacionUsuario = functions.auth
 exports.creacionUsuarioCRM = functions.auth
   .user()
   .onCreate(usuarioController.creacionUsuarioCRM)
+
+exports.registrarTopico = functions.firestore
+  .document('/tokens/{id}')
+  .onCreate(notificacionController.creacionTokenController)
+
+exports.enviarNotificacion = functions.firestore
+  .document('posts/{idPost}')
+  .onUpdate(postsController.actualizacionPostController)
