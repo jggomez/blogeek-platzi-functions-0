@@ -19,13 +19,13 @@ class Posts {
     const idPost = path.basename(rutaArchivo).split('.')[0]
     const bucket = admin.storage().bucket()
     const tmpRutaArchivo = path.join(os.tmpdir(), nombreArchivo)
-    
+
     const cliente = new vision.ImageAnnotatorClient()
-    
+
     return bucket
       .file(rutaArchivo)
       .download({
-        destination : tmpRutaArchivo
+        destination: tmpRutaArchivo
       })
       .then(() => {
         return cliente.safeSearchDetection(tmpRutaArchivo)
@@ -41,7 +41,7 @@ class Posts {
         )
       })
       .then(resp => {
-        if(resp){
+        if (resp) {
           this.actualizarEstadoPost(idPost, true)
           return resp
         }
@@ -95,7 +95,46 @@ class Posts {
   }
 
   enviarPostSemana (topicoNotificacion) {
-    
+    const fechaFin = new Date()
+    let fechaInicial = new Date()
+    fechaInicial.setDate(fechaFin.getDate() - 5)
+    let emails = ''
+
+    return admin
+      .firestore()
+      .collection('emailsusuarios')
+      .get()
+      .then(emailsUsuarios => {
+        emailsUsuarios.forEach(emailUsuario => {
+          emails += `${emailUsuario.data().email}`
+        })
+        return emails
+      })
+      .then(() => {
+        return admin
+          .firestore()
+          .collection('posts')
+          .where('fecha', '>=', fechaInicial)
+          .where('fecha', '<=', fechaFin)
+          .where('publicado', '==', true)
+          .get()
+      })
+      .then(posts => {
+        if (!posts.empty) {
+          const textHtml = plantillas.plantillaVideosLaSemana(posts)
+          const objEmail = new Email()
+
+          return objEmail.sendEmail(
+            'info@blogeek.co',
+            emails,
+            '',
+            'Video Blogekk - Los videos geek de la semana',
+            textHtml
+          )
+        }
+
+        return null
+      })
   }
 }
 
