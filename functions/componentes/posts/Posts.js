@@ -106,7 +106,7 @@ class Posts {
       .get()
       .then(emailsUsuarios => {
         emailsUsuarios.forEach(emailUsuario => {
-          emails += `${emailUsuario.data().email}`
+          emails += `${emailUsuario.data().email}, `
         })
         return emails
       })

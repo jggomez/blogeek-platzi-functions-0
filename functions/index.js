@@ -8,7 +8,7 @@ const analiticasController = require('./componentes/analiticas/AnaliticasControl
 const express = require('express')
 const cors = require('cors')
 
-const app = express
+const app = express()
 app.use(cors())
 
 admin.initializeApp()
