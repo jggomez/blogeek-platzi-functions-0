@@ -94,7 +94,9 @@ class Posts {
       })
   }
 
-  enviarPostSemana (topicoNotificacion) {}
+  enviarPostSemana (topicoNotificacion) {
+    
+  }
 }
 
 exports.Posts = Posts
