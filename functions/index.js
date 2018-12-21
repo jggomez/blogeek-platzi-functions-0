@@ -69,3 +69,7 @@ exports.validarImagen = functions.storage
   .onFinalize(postsController.validarImagenPostController)
 
 exports.enviarPostSemana = functions.https.onRequest(app)
+
+exports.nuevoErrorApp = functions.crashlytics
+  .issue()
+  .onNew(errorController.handler)
