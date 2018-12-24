@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "blogeekplatzi-4836b",
+  "private_key_id": "6af74edc19d51fbf1965eaf20e71fe91a75a04ac",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4mAA8UwU645HZ\nVjdeTcbVfshVJbCjyuK8iW6LdL8Um3lj+oMbLOtjNeYQXDhlwDbAA92r0TdNgr2s\nbWC7fkKx3GpD0ycLO5GrqmDT6MDXCqIhelAPw/vtksWRTOFOHUpx/0UkCb0S+kM9\nS6Sb7sCPmPrkmO+wVt9B7EH8JG3Yl2mcz0m5boVUx0T/AZjBXcfk4e+3u6Mfz5Mm\naxaouY+TV2XlJRl78ZHuk0Txvnhj8qG5xJJW4Z4INVRGFyGxcSmnJphdPs5bR30N\nPt+FbvPRs+sZGqXVli0FYVhNFFmbHYNSBPfvjPLX5X7KrdwuavP6tvKsJYSdC8wn\nqu7kFRqrAgMBAAECggEAWdkKTFJwekBoLiwr2QfsXuBN7DvjJWZMRE50cwaJNyOR\ny1sU03ZiwDBs4cuxW71aKM346Hd1/pFDdxjp+3iyR9YsFwVAvNPqzG6qoJpquoCf\nd8IMFBBloDZPWbDc/WN+Z8xDQA5JbGJJth0KayejrIFepUPXbrJqCrFPUMX+fWwn\n11QvSoikm8jHlXRiOjM5/Ze0pH2IA/lcNQyPpCpcgayTUMUkm79HPG6FKqG1dXPl\nQCQs6Wz0EE/K0ggdhQeSFjlLNU9tWqR3MNUS+fMf81tddXkevwMNXyXGNaRhD+yY\nnKfr+5/LU9oWWMtKQPlznTrw9wsUJ8SSb5C8Y6nESQKBgQD49DfEjd4cO0Wi/Rs3\nxmM4ZPObPrjh5JtUnB4OV+7hb+DpY0cFtmu1idIXZvpkl/XVM2HNZLy6CB6Ab9M5\nu4ralCElCPSapAmvJHvyr2cn5a/KsUdM7OHn3dLj31wROw/V3W5vLQYmfzAJOKNp\nBVo99axJpbbmjVdOXp7xbohpVQKBgQC90Xb02lkpvHlAXo+F8soNzcd0ER0Krtyz\n2en+jxmxNkHrp8R3IlIZANEvAmyyYlK6f/AkopUCMpHUpiE9gmgJk5usVhtDucuA\nOstSOEikXHj4Bf39/S2sm4FYuMi4kR9/XSpztH32dVDYFyLEJmEQXQbjBCspthq7\nf8AH21dz/wKBgQCSpOiksxx+bLucQpNhy05uzahhbhThmxOUR1G9CTcBPDGzyHLx\nfn77tG84scQUtR5ts5KMtiYlPtsYtMYrX7lu/4p2kkvjO3Uo4cjRL1kIO1fNgZeK\nTI7VUekDqXJGBBBT3ddLTa4txwW4qNA48JoznR8bUq3mKKOg2kOt23om8QKBgFju\nt44Wcunj/OcUpqe6TcJT5BvUHMgxjwPQmBoFD6OAaTgwnRK4CMDgKiGdQDH/cQUi\nBfAUID4sVTjNMQuxem7qMmh220VK2jZU1YfLCPXAwYhqvkpugSS6ospfoOMgUyKI\nEuis6ss6wcrMZCSEWrug6iYYgOSFBldMjjrgIEQfAoGBAK99kCrj7p77YuHKr//7\nZbHdAoPjvAZ2Qzh9G4PPNy+GwozSMrTed/qxvcX5841JXHt2sYhxGr24q93uoKs2\n5QUeQz86PWg6tdKoBWYr1L8hzAMd6aGifP5dOesfEEaRA/BNk3fxGDdBE0MIZZo8\nDwDG1TxXAMTzLeaaeE7H98o+\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-8wfw9@blogeekplatzi-4836b.iam.gserviceaccount.com",
+  "client_id": "113357532274377289303",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-8wfw9%40blogeekplatzi-4836b.iam.gserviceaccount.com"
+}
