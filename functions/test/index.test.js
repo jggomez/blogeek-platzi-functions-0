@@ -1,22 +1,11 @@
+const { configProjectTest, mockConfig } = require('./configTest.js')
+
 const test = require('firebase-functions-test')(
-  {
-    databaseURL: 'https://blogeekplatzi-4836b.firebaseio.com',
-    projectId: 'blogeekplatzi-4836b',
-    storageBucket: 'blogeekplatzi-4836b.appspot.com'
-  },
+  configProjectTest(),
   './test/credenciales.json'
 )
 
-test.mockConfig({
-  configuration: {
-    email: 'gdgcali@gmail.com',
-    accountsidtwilio: 'AC7198e77e92c390d41b2917f08ac8eb9e',
-    authtokentwilio: '44c711750f5e00c914652248772b5d20',
-    password: 'CaliGDG2017',
-    claveapihubspot: '84bf251d-2ee6-441d-9628-062f3a3746c3',
-    numcelularerror: '+573174498336'
-  }
-})
+test.mockConfig(mockConfig())
 
 const funciones = require('./../index.js')
 
