@@ -68,5 +68,5 @@ node_modules/
 .runtimeconfig.json
 
 #Credenciales
-credenciales.json
+test/credenciales.json
 configTest.js
